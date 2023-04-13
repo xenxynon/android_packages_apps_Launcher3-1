@@ -70,6 +70,8 @@ public class MemInfoView extends TextView {
     private MemInfoWorker mWorker;
 
     private String mMemInfoText;
+    
+    private MemInfoReader mMemInfoReader;
 
     public MemInfoView(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -81,6 +83,8 @@ public class MemInfoView extends TextView {
         mWorker = new MemInfoWorker();
 
         mMemInfoText = context.getResources().getString(R.string.meminfo_text);
+
+        mMemInfoReader = new MemInfoReader();
     }
 
     /* Hijack this method to detect visibility rather than
@@ -142,7 +146,6 @@ public class MemInfoView extends TextView {
     private class MemInfoWorker implements Runnable {
         @Override
         public void run() {
-            MemInfoReader mMemInfoReader = new MemInfoReader();
             ActivityManager.MemoryInfo memInfo = new ActivityManager.MemoryInfo();
             mActivityManager.getMemoryInfo(memInfo);
             mMemInfoReader.readMemInfo();
