@@ -1,0 +1,60 @@
+diff --git a/src/com/android/launcher3/config/FeatureFlags.java b/src/com/android/launcher3/config/FeatureFlags.java
+index bc48d7c243..39975d6a87 100644
+--- a/src/com/android/launcher3/config/FeatureFlags.java
++++ b/src/com/android/launcher3/config/FeatureFlags.java
+@@ -128,7 +128,7 @@ public final class FeatureFlags {
+             "Enable option to show keyboard when going to all-apps");
+ 
+     // TODO(Block 5): Clean up flags
+-    public static final BooleanFlag ENABLE_TWOLINE_DEVICESEARCH = getDebugFlag(201388851,
++    public static final BooleanFlag ENABLE_TWOLINE_DEVICESEARCH = getReleaseFlag(201388851,
+             "ENABLE_TWOLINE_DEVICESEARCH", ENABLED,
+             "Enable two line label for icons with labels on device search.");
+ 
+@@ -217,7 +217,7 @@ public final class FeatureFlags {
+     public static final BooleanFlag PROMISE_APPS_IN_ALL_APPS = getDebugFlag(270390012,
+             "PROMISE_APPS_IN_ALL_APPS", DISABLED, "Add promise icon in all-apps");
+ 
+-    public static final BooleanFlag KEYGUARD_ANIMATION = getDebugFlag(270390904,
++    public static final BooleanFlag KEYGUARD_ANIMATION = getReleaseFlag(270390904,
+             "KEYGUARD_ANIMATION", ENABLED,
+             "Enable animation for keyguard going away on wallpaper");
+ 
+@@ -234,8 +234,8 @@ public final class FeatureFlags {
+     public static final BooleanFlag COLLECT_SEARCH_HISTORY = getReleaseFlag(270391455,
+             "COLLECT_SEARCH_HISTORY", DISABLED, "Allow launcher to collect search history for log");
+ 
+-    public static final BooleanFlag ENABLE_TWOLINE_ALLAPPS = getDebugFlag(270390937,
+-            "ENABLE_TWOLINE_ALLAPPS", DISABLED, "Enables two line label inside all apps.");
++    public static final BooleanFlag ENABLE_TWOLINE_ALLAPPS = getReleaseFlag(270390937,
++            "ENABLE_TWOLINE_ALLAPPS", ENABLED, "Enables two line label inside all apps.");
+ 
+     public static final BooleanFlag IME_STICKY_SNACKBAR_EDU = getDebugFlag(270391693,
+             "IME_STICKY_SNACKBAR_EDU", ENABLED, "Show sticky IME edu in AllApps");
+@@ -263,7 +263,7 @@ public final class FeatureFlags {
+                     + "taskbar flavors");
+ 
+     // TODO(Block 18): Clean up flags
+-    public static final BooleanFlag ENABLE_APP_PAIRS = getDebugFlag(274189428,
++    public static final BooleanFlag ENABLE_APP_PAIRS = getReleaseFlag(274189428,
+             "ENABLE_APP_PAIRS", DISABLED,
+             "Enables the ability to create and save app pairs on the Home screen for easy"
+                     + " split screen launching.");
+@@ -281,7 +281,7 @@ public final class FeatureFlags {
+     public static final BooleanFlag ENABLE_SCRIM_FOR_APP_LAUNCH = getDebugFlag(270393276,
+             "ENABLE_SCRIM_FOR_APP_LAUNCH", DISABLED, "Enables scrim during app launch animation.");
+ 
+-    public static final BooleanFlag ENABLE_BACK_SWIPE_HOME_ANIMATION = getDebugFlag(270393426,
++    public static final BooleanFlag ENABLE_BACK_SWIPE_HOME_ANIMATION = getReleaseFlag(270393426,
+             "ENABLE_BACK_SWIPE_HOME_ANIMATION", ENABLED,
+             "Enables home animation to icon when user swipes back.");
+ 
+@@ -356,7 +356,7 @@ public final class FeatureFlags {
+             "ENABLE_ENFORCED_ROUNDED_CORNERS", ENABLED,
+             "Enforce rounded corners on all App Widgets");
+ 
+-    public static final BooleanFlag ENABLE_ICON_LABEL_AUTO_SCALING = getDebugFlag(270393294,
++    public static final BooleanFlag ENABLE_ICON_LABEL_AUTO_SCALING = getReleaseFlag(270393294,
+             "ENABLE_ICON_LABEL_AUTO_SCALING", ENABLED,
+             "Enables scaling/spacing for icon labels to make more characters visible");
+ 
