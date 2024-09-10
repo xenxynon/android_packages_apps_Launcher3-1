@@ -173,8 +173,8 @@ public final class FeatureFlags {
             "LARGE_SCREEN_WIDGET_PICKER", ENABLED, "Enable new widget picker that takes "
                     + "advantage of large screen format");
 
-    public static final BooleanFlag MULTI_SELECT_EDIT_MODE = getDebugFlag(270709220,
-            "MULTI_SELECT_EDIT_MODE", DISABLED, "Enable new multi-select edit mode "
+    public static final BooleanFlag MULTI_SELECT_EDIT_MODE = getReleaseFlag(270709220,
+            "MULTI_SELECT_EDIT_MODE", ENABLED, "Enable new multi-select edit mode "
                     + "for home screen");
 
     // TODO(Block 10): Clean up flags
@@ -244,7 +244,7 @@ public final class FeatureFlags {
             "ENABLE_PEOPLE_TILE_PREVIEW", DISABLED,
             "Experimental: Shows conversation shortcuts on home screen as search results");
 
-    public static final BooleanFlag FOLDER_NAME_MAJORITY_RANKING = getDebugFlag(270391638,
+    public static final BooleanFlag FOLDER_NAME_MAJORITY_RANKING = getReleaseFlag(270391638,
             "FOLDER_NAME_MAJORITY_RANKING", ENABLED,
             "Suggests folder names based on majority based ranking.");
 
@@ -264,7 +264,7 @@ public final class FeatureFlags {
 
     // TODO(Block 18): Clean up flags
     public static final BooleanFlag ENABLE_APP_PAIRS = getReleaseFlag(274189428,
-            "ENABLE_APP_PAIRS", DISABLED,
+            "ENABLE_APP_PAIRS", ENABLED,
             "Enables the ability to create and save app pairs on the Home screen for easy"
                     + " split screen launching.");
 
@@ -278,8 +278,8 @@ public final class FeatureFlags {
             "ENABLE_SEARCH_UNINSTALLED_APPS", ENABLED, "Search uninstalled app results.");
 
     // TODO(Block 20): Clean up flags
-    public static final BooleanFlag ENABLE_SCRIM_FOR_APP_LAUNCH = getDebugFlag(270393276,
-            "ENABLE_SCRIM_FOR_APP_LAUNCH", DISABLED, "Enables scrim during app launch animation.");
+    public static final BooleanFlag ENABLE_SCRIM_FOR_APP_LAUNCH = getReleaseFlag(270393276,
+            "ENABLE_SCRIM_FOR_APP_LAUNCH", ENABLED, "Enables scrim during app launch animation.");
 
     public static final BooleanFlag ENABLE_BACK_SWIPE_HOME_ANIMATION = getReleaseFlag(270393426,
             "ENABLE_BACK_SWIPE_HOME_ANIMATION", ENABLED,
@@ -294,8 +294,8 @@ public final class FeatureFlags {
             "ENABLE_APP_ICON_IN_INLINE_SHORTCUTS", DISABLED, "Show app icon for inline shortcut");
 
     // TODO(Block 22): Clean up flags
-    public static final BooleanFlag ENABLE_WIDGET_TRANSITION_FOR_RESIZING = getDebugFlag(268553314,
-            "ENABLE_WIDGET_TRANSITION_FOR_RESIZING", DISABLED,
+    public static final BooleanFlag ENABLE_WIDGET_TRANSITION_FOR_RESIZING = getReleaseFlag(268553314,
+            "ENABLE_WIDGET_TRANSITION_FOR_RESIZING", ENABLED,
             "Enable widget transition animation when resizing the widgets");
 
     public static final BooleanFlag PREEMPTIVE_UNFOLD_ANIMATION_START = getDebugFlag(270397209,
@@ -318,7 +318,7 @@ public final class FeatureFlags {
             "ENABLE_NEW_MIGRATION_LOGIC", ENABLED,
             "Enable the new grid migration logic, keeping pages when src < dest");
 
-    public static final BooleanFlag ENABLE_CACHED_WIDGET = getDebugFlag(270395008,
+    public static final BooleanFlag ENABLE_CACHED_WIDGET = getReleaseFlag(270395008,
             "ENABLE_CACHED_WIDGET", ENABLED,
             "Show previously cached widgets as opposed to deferred widget where available");
 
@@ -405,7 +405,7 @@ public final class FeatureFlags {
             "Enables new workspace grid calculations method.");
 
     // TODO(Block 33): Clean up flags
-    public static final BooleanFlag ENABLE_ALL_APPS_RV_PREINFLATION = getDebugFlag(288161355,
+    public static final BooleanFlag ENABLE_ALL_APPS_RV_PREINFLATION = getReleaseFlag(288161355,
             "ENABLE_ALL_APPS_RV_PREINFLATION", ENABLED,
             "Enables preinflating all apps icons to avoid scrolling jank.");
 
