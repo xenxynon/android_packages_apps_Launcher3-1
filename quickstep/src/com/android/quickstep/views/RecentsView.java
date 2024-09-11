@@ -724,7 +724,6 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
     private OverviewActionsView mActionsView;
     private ObjectAnimator mActionsViewAlphaAnimator;
     private float mActionsViewAlphaAnimatorFinalValue;
-    private MemInfoView mMemInfoView;
 
     /**
      * Keeps track of the desktop task. Optional and only present when the feature flag is enabled.
@@ -1048,12 +1047,10 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         updateTaskStackListenerState();
     }
 
-    public void init(OverviewActionsView actionsView, SplitSelectStateController splitController,
-                        MemInfoView memInfoView) {
+    public void init(OverviewActionsView actionsView, SplitSelectStateController splitController) {
         mActionsView = actionsView;
         mActionsView.updateHiddenFlags(HIDDEN_NO_TASKS, getTaskViewCount() == 0);
         mSplitSelectStateController = splitController;
-        mMemInfoView = memInfoView;
     }
 
     public SplitSelectStateController getSplitSelectController() {
@@ -1957,9 +1954,8 @@ public abstract class RecentsView<ACTIVITY_TYPE extends StatefulActivity<STATE_T
         mClearAllButton.setFullscreenProgress(fullscreenProgress);
 
         // Fade out the actions view quickly (0.1 range)
-        float alpha = mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR);
-        mActionsView.getFullscreenAlpha().setValue(alpha);
-        mMemInfoView.setAlpha(MemInfoView.ALPHA_FS_PROGRESS, alpha);
+        mActionsView.getFullscreenAlpha().setValue(
+                mapToRange(fullscreenProgress, 0, 0.1f, 1f, 0f, LINEAR));
     }
 
     private void updateTaskStackListenerState() {
